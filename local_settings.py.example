@@ -1,5 +1,6 @@
 
 DEBUG = True
+TIME_ZONE = 'Europe/Paris'
 
 # Make these unique, and don't share it with anybody.
 SECRET_KEY = "0ee67b52-7e4e-4a4c-bf73-4578c81f358bfa229f56-cba1-4e0e-bdbe-a07ed27cc30596add8a1-8b71-4a18-a7cc-8f6dcb1a63ce"
