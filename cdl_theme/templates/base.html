@@ -49,24 +49,37 @@
 
 <body id="{% block body_id %}body{% endblock %}">
 
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-<div class="container">
-<div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">{% trans "Toggle Navigation" %}</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-    </button>
-    {% if settings.SITE_TITLE %}<a class="navbar-brand" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
-    {% if settings.SITE_TAGLINE %}<p class="navbar-text visible-lg">{{ settings.SITE_TAGLINE }}</p>{% endif %}
-</div>
-<div class="navbar-collapse collapse">
-    {% search_form "all" %}
-    {% page_menu "pages/menus/dropdown.html" %}
-</div>
-</div>
-</div>
+<header>
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">{% trans "Toggle Navigation" %}</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <hgroup>
+                    <a href="/" alt="home"><img src="{% static "img/logo-cdl.png" %}"
+                          alt="bannière" /></a>
+                    <h1 class="text-hide">{{ settings.SITE_TITLE }}</h1>
+                    <h2 class="slogan hidden-xs">{{ settings.SITE_TAGLINE }}</h2>
+                </hgroup>
+            </div>
+            <div class="navbar-collapse collapse">
+                {% page_menu "pages/menus/dropdown.html" %}
+            </div>
+            
+            {% block comm %}
+            <div class="row">
+                <div class="col-xs-12">
+                    {% include "_comm_box.html" %}
+                </div>
+            </div>
+            {% endblock %}
+        </div>
+    </div>
+</header>
 
 <div class="container">
 
@@ -83,26 +96,21 @@
 {% endif %}
 {% endnevercache %}
 
-<h1>{% block title %}{% endblock %}</h1>
-
 <ul class="breadcrumb">
 {% spaceless %}
 {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
 {% endspaceless %}
 </ul>
 
+<h1>{% block title %}{% endblock %}</h1>
+
+
 </div>
 
 <div class="container">
 <div class="row">
 
-<div class="col-md-2 left">
-    {% block left_panel %}
-    <div class="panel panel-default tree">{% page_menu "pages/menus/tree.html" %}</div>
-    {% endblock %}
-</div>
-
-<div class="col-md-7 middle">
+<div class="col-md-9 middle">
     {% block main %}{% endblock %}
 </div>
 
@@ -110,15 +118,12 @@
     {% nevercache %}
     {% include "includes/user_panel.html" %}
     {% endnevercache %}
-    <div class="panel panel-default">
-    <div class="panel-body">
+    {% search_form "all" %}
     {% block right_panel %}
     {% ifinstalled mezzanine.twitter %}
     {% include "twitter/tweets.html" %}
     {% endifinstalled %}
     {% endblock %}
-    </div>
-    </div>
 </div>
 
 </div>

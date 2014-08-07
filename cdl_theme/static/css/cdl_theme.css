@@ -1,8 +1,126 @@
 
+@font-face {
+  font-family: 'texgyreadventor';
+  src: url('../fonts/texgyreadventor/texgyreadventor-regular-webfont.eot');
+  src: url('../fonts/texgyreadventor/texgyreadventor-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/texgyreadventor/texgyreadventor-regular-webfont.woff') format('woff'), url('../fonts/texgyreadventor/texgyreadventor-regular-webfont.ttf') format('truetype'), url('../fonts/texgyreadventor/texgyreadventor-regular-webfont.svg#texgyreadventorregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'texgyreadventor';
+  src: url('../fonts/texgyreadventor/texgyreadventor-italic-webfont.eot');
+  src: url('../fonts/texgyreadventor/texgyreadventor-italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/texgyreadventor/texgyreadventor-italic-webfont.woff') format('woff'), url('../fonts/texgyreadventor/texgyreadventor-italic-webfont.ttf') format('truetype'), url('../fonts/texgyreadventor/texgyreadventor-italic-webfont.svg#texgyreadventoritalic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'texgyreadventor';
+  src: url('../fonts/texgyreadventor/texgyreadventor-bold-webfont.eot');
+  src: url('../fonts/texgyreadventor/texgyreadventor-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/texgyreadventor/texgyreadventor-bold-webfont.woff') format('woff'), url('../fonts/texgyreadventor/texgyreadventor-bold-webfont.ttf') format('truetype'), url('../fonts/texgyreadventor/texgyreadventor-bold-webfont.svg#texgyreadventorbold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'texgyreadventor';
+  src: url('../fonts/texgyreadventor/texgyreadventor-bolditalic-webfont.eot');
+  src: url('../fonts/texgyreadventor/texgyreadventor-bolditalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/texgyreadventor/texgyreadventor-bolditalic-webfont.woff') format('woff'), url('../fonts/texgyreadventor/texgyreadventor-bolditalic-webfont.ttf') format('truetype'), url('../fonts/texgyreadventor/texgyreadventor-bolditalic-webfont.svg#texgyreadventorbold_italic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+body {
+  background-color: #E8E8E8;
+  font-size: 16px;
+  padding-top: 0;
+}
+h1 {
+  color: #d03d00;
+}
+h2,
+h3,
+h4 {
+  color: #777777;
+}
+/* Header *
+ * ------ */
+header {
+  padding-top: 80px;
+  background: url('../img/photos-horizontal.jpg') repeat-x top center;
+}
+header #communiquer {
+  text-align: right;
+}
+@media (min-width: 768px) {
+  header #communiquer {
+    position: absolute;
+    right: 0;
+    top: -25px;
+    background-color: #222222;
+    padding: 2px 15px;
+  }
+}
+#header {
+  overflow: hidden;
+}
+h1.text-hide,
+h2.text-hide {
+  margin: 0;
+}
+h2.slogan {
+  font-size: 1em;
+  margin: 0;
+  color: #eeeeee;
+}
+#main {
+  background-color: #FFFFFF;
+}
+/* social links *
+ * ------------ */
+#communiquer a {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  display: inline-block;
+  font: 0/0 a;
+  padding: 16px;
+  background: url('../img/feed-32x32.png') no-repeat 0 0;
+}
+#communiquer a#identica {
+  background-image: url('../img/identica-32x32.png');
+}
+#communiquer a#twitter {
+  background-image: url('../img/twitter-32.png');
+}
+#communiquer a#google {
+  background-image: url('../img/google-plus-32.png');
+}
+#communiquer a#lanyrd {
+  background-image: url('../img/lanyrd-32x32.png');
+}
+#communiquer a#facebook {
+  background-image: url('../img/facebook-32.png');
+}
+#communiquer a#flickr {
+  background-image: url('../img/flickr-32.png');
+}
+/* Footer *
+ * ------ */
+#footer {
+  font-size: 0.875em;
+  color: #999;
+  text-align: right;
+}
+#footer a {
+  color: #777;
+}
+
+
+
 div.navbar-fixed-top.navbar.navbar-default {
     height: 180px;
     background: url('../img/photos-horizontal.jpg') repeat-x scroll center top #222;
 }
+/*
 
 div.navbar-fixed-top.navbar.navbar-default > .container {
     position: relative;
@@ -28,3 +146,4 @@ div.navbar-fixed-top.navbar.navbar-default > .container .navbar-brand + p {
 div.navbar-fixed-top.navbar.navbar-default + .container {
     padding-top: 180px;
 }
+*/
