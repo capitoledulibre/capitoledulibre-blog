@@ -19,11 +19,6 @@
         {% if page.has_children_in_menu %}{% page_menu page %}{% endif %}
     </li>
     {% endif %}
-    {% if not has_home and page.is_primary and forloop.first %}
-    <li{% if on_home %} class="active"{% endif %} id="dropdown-menu-home">
-        <a href="{% url "home" %}">{% trans "Blog" %}</a>
-    </li>
-    {% endif %}
     {% endfor %}
 </ul>
 
@@ -43,4 +38,9 @@
 {% endif %}
 
 {% endif %}
+<ul class="nav navbar-nav">
+    <li{% if on_home %} class="active"{% endif %} id="dropdown-menu-home">
+        <a href="{% url "home" %}">{% trans "Blog" %}</a>
+    </li>
+</ul>
 {% endspaceless %}
