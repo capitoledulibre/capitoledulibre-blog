@@ -4,10 +4,9 @@ Capitole du Libre blog site, made with mezzanine, an django project for blog sys
 
 ## Installation
 
-Copy local_settings.py.example to local_settings.py
+Run these commands
 
-Then run these commands
-
+    cp local_settings.py.example local_settings.py
     python manage.py syncdb
     python manage.py migrate
     python manage.py runserver
