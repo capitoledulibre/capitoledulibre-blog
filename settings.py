@@ -131,7 +131,7 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 SITE_ID = 1
 
 SITE_TITLE = u"Capitole du Libre 2014"
-SITE_TAGLINE = u"L'événement du Logiciel Libre"
+SITE_TAGLINE = u"L'événement du Logiciel Libre à Toulouse"
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
