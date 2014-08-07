@@ -1,0 +1,33 @@
+{% load i18n future pages_tags %}
+
+{% spaceless %}
+{% if page_branch_in_menu %}
+
+{% for page in page_branch %}
+    {% if page.is_primary %}
+        {% if forloop.first %}
+            <ul class="nav navbar-nav">
+        {% endif %}
+    {% endif %}
+
+    {% if page.in_menu %}
+        <li {% if page.is_current_or_ascendant %}class="active"{% endif %}
+            id="footer-menu-{{ page.html_id }}">
+            <a href="{{ page.get_absolute_url }}">{{ page.title }}</a>
+            
+            {% if page.in_menu and page.has_children_in_menu %}
+                <ul class="nav nav-stacked">{% page_menu page %}</ul>
+            {% endif %}
+        </li>
+    {% endif %}
+
+    {% if page.is_primary %}
+        {% if forloop.last %}
+            </ul>
+        {% endif %}
+    {% endif %}
+
+{% endfor %}
+
+{% endif %}
+{% endspaceless %}
