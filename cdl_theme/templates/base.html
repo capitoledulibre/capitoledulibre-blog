@@ -99,6 +99,8 @@
 <ul class="breadcrumb">
 {% spaceless %}
 {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
+
+{% search_form %}
 {% endspaceless %}
 </ul>
 
@@ -120,7 +122,6 @@
     {% nevercache %}
     {% include "includes/user_panel.html" %}
     {% endnevercache %}
-    {% search_form "all" %}
     {% block right_panel %}
     {% ifinstalled mezzanine.twitter %}
     {% include "twitter/tweets.html" %}
