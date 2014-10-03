@@ -124,14 +124,11 @@ div.navbar-fixed-top.navbar.navbar-default {
 /* Elements *
  * -------- */
 
-.blog-post {
-    border-right: 1px dotted #CCC;
-}
 .blog-thumb h2 {
-    font-size: 1.7em;
+    font-size: 1.5em;
 }
 .blog-list-detail {
-    border-bottom: 1px dotted #CCC;
+    border-bottom: 1px dashed #CCC;
   margin-bottom: 0;
   padding-bottom: 0;
 }
