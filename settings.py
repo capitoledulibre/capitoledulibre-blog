@@ -80,6 +80,13 @@ from __future__ import absolute_import, unicode_literals
 # INSTALLED_APPS setting.
 USE_SOUTH = True
 
+BLOG_SLUG = ""
+
+# comments
+COMMENTS_REMOVED_VISIBLE = False
+
+COMMENTS_USE_RATINGS = False
+
 
 ########################
 # MAIN DJANGO SETTINGS #
@@ -131,7 +138,7 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 SITE_ID = 1
 
 SITE_TITLE = u"Capitole du Libre 2014"
-SITE_TAGLINE = u"L'événement du Libre toulousain"
+SITE_TAGLINE = u"L'événement du Libre Toulousain"
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.

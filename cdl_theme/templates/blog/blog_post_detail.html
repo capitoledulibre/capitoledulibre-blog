@@ -29,7 +29,7 @@
 {% endeditable %}
 {% endblock %}
 {% block blog_post_detail_commentlink %}
-<span>
+<span class="post-comments-count">
     {% if blog_post.allow_comments %}
         {% if settings.COMMENTS_DISQUS_SHORTNAME %}
             (<a href="{{ blog_post.get_absolute_url }}#disqus_thread"
@@ -64,14 +64,7 @@
 {% block blog_post_detail_keywords %}
 {% keywords_for blog_post as tags %}
 {% if tags %}
-{% spaceless %}
-<ul class="list-inline tags">
-    <li>{% trans "Tags" %}:</li>
-    {% for tag in tags %}
-    <li><a href="{% url "blog_post_list_tag" tag.slug %}">{{ tag }}</a></li>
-    {% endfor %}
-</ul>
-{% endspaceless %}
+    {% include "blog/includes/post_keywords.html" %}
 {% endif %}
 {% endblock %}
 

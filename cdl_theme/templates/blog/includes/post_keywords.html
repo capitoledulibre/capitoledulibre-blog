@@ -1,0 +1,9 @@
+{% load i18n blog_tags keyword_tags %}
+<ul class="list-inline post-tags">
+    <strong>{% trans "Tags" %}:</strong>
+    {% spaceless %}
+    {% for tag in tags %}
+    <li><a href="{% url "blog_post_list_tag" tag.slug %}" class="tag label label-default">{{ tag }}</a></li>
+    {% endfor %}
+    {% endspaceless %}
+</ul>

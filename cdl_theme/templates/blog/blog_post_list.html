@@ -120,14 +120,7 @@
 <div class="blog-list-detail">
     {% keywords_for blog_post as tags %}
     {% if tags %}
-    <ul class="list-inline tags">
-    {% trans "Tags" %}:
-    {% spaceless %}
-    {% for tag in tags %}
-    <li><a href="{% url "blog_post_list_tag" tag.slug %}" class="tag">{{ tag }}</a></li>
-    {% endfor %}
-    {% endspaceless %}
-    </ul>
+        {% include "blog/includes/post_keywords.html" %}
     {% endif %}
     <p class="text-hide"><a href="{{ blog_post.get_absolute_url }}">{% trans "read more" %}</a>
     {% if blog_post.allow_comments %}

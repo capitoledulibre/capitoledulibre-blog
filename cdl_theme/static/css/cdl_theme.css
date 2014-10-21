@@ -32,6 +32,7 @@ body {
   background-color: #E8E8E8;
   font-size: 16px;
   padding-top: 0;
+  font-family: Verdena,"Lucida Grande",sans-serif;
 }
 h1 {
   color: #d03d00;
@@ -41,8 +42,10 @@ h3,
 h4 {
   color: #777777;
 }
+
 /* Header *
  * ------ */
+
 header {
   padding-top: 80px;
   background: url('../img/photos-horizontal.jpg') repeat-x top center;
@@ -74,8 +77,10 @@ h2.slogan {
 #main {
   background-color: #FFFFFF;
 }
+
 /* social links *
  * ------------ */
+
 #communiquer a {
   overflow: hidden;
   text-indent: 100%;
@@ -103,8 +108,10 @@ h2.slogan {
 #communiquer a#flickr {
   background-image: url('../img/flickr-32.png');
 }
+
 /* Footer *
  * ------ */
+
 footer {
   background-color: #222222;
   font-size: 0.95em;
@@ -113,8 +120,6 @@ footer {
 footer a {
   color: #777;
 }
-
-
 
 div.navbar-fixed-top.navbar.navbar-default {
     height: 180px;
@@ -135,21 +140,26 @@ div.navbar-fixed-top.navbar.navbar-default {
 
 .post-infos {
     color: #888;
+    font-style: italic;
+    font-size: 0.85em;
+    text-align: right;
+    margin-bottom: 1em;
+}
+.blog-thumb .post-infos {
+    text-align: left;
 }
 .post-infos a {
     color: #333;
-}
-.post-infos span {
-    display: block;
 }
 .post-category,
 .post-meta {
     margin-bottom: 0;
     font-style: italic;
     font-weight: normal;
-    font-size: 14px;
 }
-
+.post-tags {
+    text-align: right;
+}
 .comment-author {
     background-color: #fff5ff;
 }
